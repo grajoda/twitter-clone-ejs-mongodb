@@ -1,0 +1,38 @@
+<div class="user-menu">
+    <img src="/user/<%= user._id %>/profilePicture">
+    <div class="usernames">
+        <p><%= user.username %></p>
+        <p>@<%= user.username %></p>
+    </div>
+    <h3>...</h3>
+</div>
+
+<style>
+    .user-menu {
+        color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-left: 20%;
+        margin-top: 80%;
+        margin-bottom: 5%;
+        padding: 5%;
+        padding-left: 4%;
+        border-radius: 2rem;
+    }
+
+    .user-menu:hover {
+        background-color: rgb(43, 43, 43);
+    }
+
+    .user-menu * {
+        margin: 0;
+    }
+
+    .user-menu img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+</style>

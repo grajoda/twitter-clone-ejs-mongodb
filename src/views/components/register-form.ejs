@@ -1,0 +1,88 @@
+<div class="register-form">
+    <div class="pop-up">
+        <div class="register-background">
+            <div>
+                <a href="/home">X</a>
+            </div>
+
+            <form action="/register" method="post">
+                <i class="fa-brands fa-twitter"></i>
+                <label>Entrar no Twitter</label>
+                <input class="login-register-input" type="text" name="username" placeholder="Digite seu nome de usuário">
+                <input class="login-register-input" type="password" name="password" placeholder="Digite sua senha">
+                <input class="login-register-input" type="password" name="passwordConfirm" placeholder="Confirme sua senha">
+                <button class="submit-button" type="submit">Entrar</button>
+            </form>
+        
+            <p>Bem vindo ao twitter</p>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    .register-form {
+        color: aliceblue;
+    }
+
+    .pop-up {
+        position: absolute;
+        background-color: rgb(21, 40, 61);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+    }
+
+    .register-background {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: black;
+        width: 40%;
+        text-align: center;
+        align-items: center;
+        border-radius: 1rem;
+        left: 30%;
+        top: 20%;
+    }
+
+    .register-background p {
+        margin-bottom: 5%;
+    }
+
+    .register-form form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        align-self: center;
+        /* background-color: aqua; */
+    }
+
+    .register-form label {
+        margin-bottom: 5%;
+    }
+
+    .register-form input {
+        margin-bottom: 5%;
+    }
+
+
+    .submit-button {
+        font-size: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .login-register-input {
+        font-size: 100%;
+        border-radius: 1rem;
+        padding: 0.3rem;
+        padding-left: 0.7rem;
+        margin-top: 1rem;
+    }
+
+</style>

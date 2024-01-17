@@ -1,0 +1,40 @@
+<div class="new-post-screen">
+
+    <a href="/home">
+        <div class="pop-up"></div>
+    </a>
+
+    <div class="form-background">
+        <%- include('./feed/new-post-box')%>
+    </div>
+
+</div>
+
+<style>
+    .new-post-screen {
+        position: absolute;
+        color: aliceblue;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .pop-up {
+        position: absolute;
+        background-color: rgb(9, 27, 48);
+        width: 100%;
+        height: 100%;
+        opacity: 50%;
+    }
+
+    .form-background {
+        background-color: rgb(17, 17, 17);
+        position: absolute;
+        width: 50%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        border-radius: 1.5rem;
+        left: 25%;
+        top: 10%;
+    }
+</style>

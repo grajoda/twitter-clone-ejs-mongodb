@@ -1,0 +1,78 @@
+<div class="home_menu">
+
+    <ul>
+        <li id="home_logo_button"><a href="/home" ><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="/home"> <i class="fa-solid fa-house"></i> Pagina Inicial</a></li>
+        <li><a href="/notifications"> <i class="fa-regular fa-bell"></i> Notificações</a></li>
+        <li><a href="/messages"> <i class="fa-regular fa-message"></i> Mensagens</a></li>
+        <li><a href="/user/<%= user._id %>"> <i class="fa-regular fa-user"></i> Perfil</a></li>
+
+        <li id="new-post-button"><a  href="/newPost">Postar</a></li>
+    </ul>
+
+    <%- include('./user_menu')%>
+</div>
+
+<style>
+    .home_menu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+    }
+
+    .home_menu a {
+        position: relative;
+        color: aliceblue;
+        text-decoration: none;
+        border-radius: 2rem;
+        padding: 3%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .home_menu a :hover{
+        background-color: rgb(43, 43, 43);
+    }
+
+    .home_menu ul {
+        width: 100%;
+    }
+
+    .home_menu li {
+        margin-bottom: 8%;
+        font-size: 140%;
+        list-style-type: none;
+    }
+    .home_menu li :hover{
+        background-color: rgb(43, 43, 43);
+    }
+
+    .home_menu li i {
+        margin-right: 4%;
+    }
+
+    #home_logo_button {
+        padding: 2%;
+        padding-left: 1%;
+        padding-right: 0%;
+        margin-bottom: 5%;
+    }
+
+    #home_logo_button i {
+        color: rgb(0, 110, 255);
+    }
+
+    #new-post-button{
+        position: relative;
+        width: 80%;
+        text-align: center;
+        background-color: rgb(0, 110, 255);
+        padding: 5%;
+        border-radius: 1.5rem;
+    }
+
+    #new-post-button :hover{
+        background-color: rgb(0, 110, 255);
+
+    }
+
+</style>

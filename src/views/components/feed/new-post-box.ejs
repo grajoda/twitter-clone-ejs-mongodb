@@ -1,0 +1,144 @@
+<div class="new-post-box">
+    <img src="/user/<%= user._id %>/profilePicture">
+    <form action="newPost" method="post">
+        <select id="audience">
+            <option>qualquer pessoa</option> 
+        </select>
+        <br>
+        <textarea maxlength="300" name="postText" placeholder="O que está acontecendo?"></textarea>
+        <br>
+
+        <select id="alloud-to-answer">
+            <option>qualquer pessoa pode responder</option>
+        </select>
+        <br>
+
+
+        <div class="aditional-media-selector">
+            <ul>
+                <li><i class="fa-regular fa-image"></i></li>
+                <li><i class="fa-solid fa-photo-film"></i></li>
+                <li><i class="fa-solid fa-table-list"></i></li>
+                <li><i class="fa-solid fa-face-smile"></i></li>
+                <li><i class="fa-regular fa-calendar"></i></li>
+                <li><i class="fa-solid fa-location-dot"></i></li>
+            </ul>
+            <button class="post-submit-button" type="submit">Postar</button>
+        </div>
+        <br>
+
+
+    </form>
+</div>
+
+<style>
+    .new-post-box{
+        background-color: rgba(0, 0, 0);
+        display: flex;
+        padding-top: 2%;
+        padding-left: 2%;
+
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        /* border-bottom: 2px; */
+
+        /* border-bottom: 1px; */
+    }
+
+    .new-post-box img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+    .new-post-box form {
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .new-post-box form textarea {
+        width: 97%;
+        height: auto;
+        min-height: 25%;
+        resize: none;
+        font-size: 130%;
+        padding: 2%;
+        line-break: auto;
+
+        color: aliceblue;
+        background-color: black;
+        border: 0;
+    }
+
+
+    .new-post-box form select {
+        color: rgb(0, 110, 255);
+        background-color: black;
+        font-size: 100%;
+
+    }
+
+    #audience {
+        border-style: solid;
+        border-color: rgb(0, 110, 255);
+        border-width: 1px;
+        border-radius: 1rem;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #alloud-to-answer{
+        border: 0;
+    }
+
+
+    .aditional-media-selector {
+        margin-top: 2%;
+        padding-top: 1%;
+        position: relative;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+
+        border-style: solid;
+        border-color: rgb(95, 95, 95);
+        border-width: 1px;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+    .aditional-media-selector ul {
+        margin-left: 0;
+        margin-top: 2%;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .aditional-media-selector ul li {
+        list-style-type: none;
+        color: rgb(0, 110, 255);
+    }
+
+    .post-submit-button {
+        margin-top: 1%;
+        border-radius: 1rem;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 100%;
+        border: 0;
+        color: aliceblue;
+        background-color: rgb(0, 110, 255);
+    }
+</style>
+
+<script>
+    const textarea = document.getElementsByTagName('textarea');
+</script>

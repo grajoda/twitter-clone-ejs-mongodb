@@ -1,0 +1,97 @@
+<div class="messages">
+
+    <% if (messages.length == 0) { %>
+        <h2 class="no-message-advise">Vocês não tem mensagens ainda!</h2>
+    <% } else { %>
+        <% messages.forEach(message => { %>
+            <% if (message.author_id == user._id) { %>
+    
+                <div class="send-message-design">
+                    <div class="message-content" id="send-message-content">
+                        <p><%= message.text %></p>
+                        <p><%=// message.post %></p>
+                    </div>
+                    <p class="message-time"><% message.time %></p>
+                </div>
+    
+            <% } else { %>
+    
+                <div class="received-message-design">
+                    <div class="message-content" id="received-message-content">
+                        <p><%= message.text %></p>
+                        <p><%=// message.post %></p>
+                    </div>
+                    <p class="message-time"><% message.time %></p>
+                </div>
+            <% } %>
+    
+        <% }) %>
+    
+    <% } %>
+
+</div>
+
+
+
+<style>
+
+    .messages {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        width: 99%;
+    }
+
+    .no-message-advise {
+        text-align: center;
+    }
+    
+    .send-message-design {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin-right: 5%;
+        margin-top: 4%;
+        
+    }
+
+
+    .received-message-design {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        margin-left: 3%;
+    }
+
+    .message-time {
+        font-size: 90%;
+    }
+
+    .message-content {
+        background-color: rgb(0, 48, 94);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        /* padding-right: 5%;
+        padding-left: 7%; */
+        margin-left: 3%;
+    }
+
+    .message-content * {
+        margin: 0;
+    }
+
+    #send-message-content {
+        background-color: rgb(0, 80, 155);
+        border-radius: 1rem 1rem 0rem 1rem;
+    }
+
+    #received-message-content {
+        background-color: rgb(68, 68, 68);
+        border-radius: 1rem 1rem 1rem 0rem;
+    }
+
+</style>

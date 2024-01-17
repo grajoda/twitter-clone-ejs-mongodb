@@ -1,0 +1,49 @@
+<div class="message-contact-design">
+    <img src="#">
+    <div class="list-message-content">
+        <% chats.forEach(chat => { %>
+            <a href="/messages/chat/<%= chat._id %>">
+                <div class="message-data">
+                    <% if (chat.type == 'private') { %> 
+                        <p><%= chat.chat_title.find(receiverUsername => receiverUsername !== user.username) %></p>
+                    <% } %>
+                    <p>@user.nickname</p>
+                    <p>lastMessageDate</p>
+                </div>
+                <p>message sub text</p>
+            </a>
+        <% }) %>
+    </div>
+</div>
+
+<style>
+    
+    .message-contact-design {
+        display: flex;
+        margin: 2%; 
+    }
+
+    .message-contact-design img {
+        width: 40px;
+        height: 40px;
+        border-radius: 1.5rem;
+        background-color: aqua;
+    }
+
+    .list-message-content {
+        margin-left: 3%;
+    }
+
+    .list-message-content * {
+        margin: 0;
+    }
+
+    .list-message-content a {
+        text-decoration: none;
+        color: unset;
+    }
+
+    .message-data {
+        display: flex;
+    }
+</style>

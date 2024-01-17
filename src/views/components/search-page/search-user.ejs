@@ -1,0 +1,49 @@
+<div class="search-user">
+    <% if (foundUsers.length == 0) { %>
+        <div class="no-result-advise">
+            <h2>Nenhum usuário encontrado</h2>
+        </div>
+    <% } else { %>
+        <% foundUsers.forEach(user => { %>
+            <a class="user-page-link" href="/user/<%= user._id %>">
+                <div class="user-tag">
+                    <p></p>
+                    <h3><%= user.username %></h3>
+                    <p>trend.last24hNumber</p>
+                </div>
+            </a>
+            <i class="fa-solid fa-ellipsis"></i>
+        <% }) %>
+    <% } %>
+
+</div>
+
+<style>
+    .search-user{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 4%;
+        align-items: center;
+    }
+
+    .search-user * {
+        margin: 0;
+    }
+
+    .user-page-link {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    .user-tag p {
+        color: gray;
+    }
+
+    .no-result-advise {
+        text-align: center;
+    }
+
+</style>

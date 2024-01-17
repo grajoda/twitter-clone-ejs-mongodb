@@ -1,0 +1,58 @@
+<div class="chat-input">
+    <div class="chat-background">
+        <div class="chat-media-icons">
+            <i class="fa-regular fa-image"></i>
+            <i class="fa-brands fa-git"></i>
+            <i class="fa-regular fa-face-smile"></i>
+        </div> 
+    
+        <form action="/chat/<%= page_chat_id %>/newMessage" method="post">
+            <input type="text" name="messageText" placeholder="iniciar uma nova mensagem ">
+            <button type="submit"> > </button>
+        </form>
+    </div>
+
+</div>
+
+<style>
+    .chat-input {
+        position: fixed;
+        width: 37%;
+        background-color: black;
+        padding: 0.8rem;
+        top: 92%;
+    }
+
+    .chat-background {
+        display: flex;
+        background-color: rgb(37, 37, 37);
+        justify-content: space-between;
+        align-items: center;
+        padding: 1%;
+        padding-left: 3%;
+        border-radius: 1.5rem;
+    }
+
+    .chat-media-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+    }
+
+    .chat-input form {
+        width: 75%;
+    }
+    .chat-input form input {
+        width: 80%;
+        padding: 1%;
+        border: 0;
+        background-color: rgb(37, 37, 37);
+    }
+
+    .chat-input form button {
+        margin-left: 6%;
+        border: 0;
+        color: aqua;
+        background-color: rgb(37, 37, 37);
+    }
+</style>

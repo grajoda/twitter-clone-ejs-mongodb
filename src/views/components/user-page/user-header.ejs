@@ -1,0 +1,165 @@
+<div class="user-header-profile">
+    <h3><%= pageUser.username %></h3>
+    <div class="profile-images">
+        <img id="cover-image" src="#">
+        <div class="prof-pic-and-options-menu">
+            <img id="profile-picture" src="/user/<%= user._id %>/profilePicture">
+            <div class="user-interact-menu">
+                <% if (pageUser._id.toString() == user._id.toString()) { %>
+                    <p><a href="/user/<%= user._id %>/update">Editar Perfil</a></p>
+                <% } else { %>
+                    <form method="post">
+                        <button formaction="/newPrivateChat/<%= pageUser._id %>">Mensagem</button>
+                    </form>
+
+                    <% if (pageUser.followers.includes(user._id)) { %>
+                        <p>Seguindo</p>
+                    <% } else { %>
+                        <form method="post">
+                            <button formaction="/user/<%= pageUser._id %>/follow">Seguir</button>
+                        </form>
+                    <% } %>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user-profile-content">
+        <h3><%= pageUser.username %></h3>
+        <p>@user.nickname</p>
+        <p><%= pageUser.bio_text %></p>
+        <p><%=// pageuser.memeber_since %></p>
+        <a><%= pageUser.following.length %> Seguindo</a>
+        <a><%= pageUser.followers.length %> Sguidores</a>
+    </div>
+
+    <div class="user-content-menu">
+        <a href="#"><p id="posts">Posts</p></a>
+        <a href="#"><p>Respostas</p></a>
+        <a href="#"><p>Destaques</p></a>
+        <a href="#"><p>Mídia</p></a>
+        <a href="#"><p>Curtidas</p></a>
+    </div>
+</div>
+
+<style>
+
+    /* .user-header-profile {
+
+    } */
+
+    .profile-images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+    }
+    .profile-images img {
+        position: relative;
+        object-fit: cover;
+        width: 100px;
+    }
+
+    #cover-image {
+        background-color: aquamarine;
+        width: 100%;
+        height: 200px;
+    }
+
+    #profile-picture {
+        width: 150px;
+        height: 150px;
+        background-color: antiquewhite;
+        border-radius: 6rem;
+        border-style: solid;
+        border-color: black;
+        margin-left: 4%;
+        margin-bottom: 0;
+
+    }
+
+    .prof-pic-and-options-menu {
+        display:  flex;
+        align-items: center;
+        bottom: 5rem;
+    }
+
+    .user-interact-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3rem;
+        padding-right: 3%;
+        padding-left: 3%;
+        height: 50%;
+        width: 50%;
+    }
+
+    .user-interact-menu p {
+        border-style: solid;
+        border-width: 1px;
+        padding: 2%;
+        border-radius: 2rem;
+    }
+
+    .user-interact-menu a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    .user-interact-menu button {
+        border-style: solid;
+        border-width: 1px;
+        padding: 15%;
+        border-radius: 2rem;
+        font-size: 100%;
+        border-color: aliceblue;
+        color: aliceblue;
+        background-color: black;
+    }
+    .user-interact-menu button:hover {
+        background-color: aliceblue;
+        color: black;
+    }
+
+    .user-profile-content{
+        margin-left: 3%;
+    }
+
+
+    .user-content-menu {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        border-style: solid;
+        border-width: 1px;
+        border-color: gray;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .user-content-menu a {
+        color: aliceblue;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 0;
+    }
+
+    .user-content-menu p {
+        padding-bottom: 8%;
+        margin-bottom: 0;
+    }
+
+    #posts {
+        border-style: solid;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-color: turquoise;
+    }
+</style>

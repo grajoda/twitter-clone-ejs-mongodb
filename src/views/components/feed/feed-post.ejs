@@ -1,0 +1,119 @@
+<div class="feed-post">
+    <% if (posts.length == 0) { %>
+        <h3 style="color: aliceblue; text-align: center;">Não tem postagens para visualiar</h3>
+    <% } %>
+    <%posts.reverse().forEach(post => { %>
+        <div class="post"> 
+            <img class="post-author-image" src="/user/<%= user._id %>/profilePicture">
+            <div class="post-content">
+                
+                <div class="post-author">
+                    <div>
+                        <h4><%=post.author_username %> </h4>
+                        <p>@author.nickname</p>
+                        <p><%= post.date %></p>
+                    </div>
+                    <h4><i class="fa-solid fa-ellipsis"></i></h4>
+                </div>
+                
+                <p><%= post.text %></p>
+                
+                <img class="post-image-content" src="">
+    
+                <div class="post-interaction-menu">
+                    <a><i class="fa-regular fa-comment"></i> <%= post.comments.length %></a> 
+                    <a><i class="fa-solid fa-retweet"></i> 10</a> 
+                    <% if (post.likedBy.includes(user._id)) { %>
+                        <a href="/post/<%= post._id %>/like" style="color: rgb(240, 46, 46);"><i class="fa-solid fa-heart"></i> <%= post.likes %></a>
+                    <% } else { %>
+                        <a href="/post/<%= post._id %>/like" ><i class="fa-regular fa-heart"></i> <%= post.likes %></a>
+                    <% } %>
+                    <a><i class="fa-solid fa-chart-simple"></i> 1000</a>
+                </div>
+                
+            </div>
+        </div>
+
+    <%});%>
+</div>
+
+<style>
+    .feed-post{
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 1%;
+
+    }
+
+    .post {
+        width: 100%;
+        display: flex;
+
+        border-style: solid;
+        border-width: 1px;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-color: gray;
+
+        padding: 2%;
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+
+    .post-author-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 2rem;
+        object-fit: cover;
+    }
+
+    .post-author {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .post-author div {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .post-author h4 {
+        margin: 0;
+    }
+    .post-author p {
+        margin: 0;
+        font-size: 90%;
+        color: gray;
+    }
+
+    .post-content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 2%;
+    }
+
+
+    .post-interaction-menu  {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-size: 90%;
+        color: gray;
+    }
+
+    .post-interaction-menu a {
+        text-decoration: none;
+        color: gray;
+    }
+
+
+</style>

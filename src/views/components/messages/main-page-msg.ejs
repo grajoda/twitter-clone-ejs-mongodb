@@ -1,0 +1,56 @@
+<div class="main_messages">
+
+    <div class="message-list">
+        <%- include("./messages-header") %>
+        <%- include("./messages-search-box") %>
+        <%- include("./chat-list") %>
+    </div>
+
+    <div class="chat"> 
+
+        <%- include("./new-chat-card") %>
+
+    </div>
+</div>
+
+
+<style>
+
+    .main_messages {
+        color: aliceblue;
+        background-color: black;
+        width: 172%;
+        height: 100%;
+
+        display: flex;
+    }
+
+    .message-list {
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        border-top: 0;
+        border-bottom: 0;
+        width: 25%;
+        height: 100%;
+        margin-bottom: 5%;
+        position: fixed;
+    }
+
+    .chat {
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        overflow: auto; /* Isso permite a rolagem quando o conteúdo exceder as dimensões especificadas */
+        /* background-color: blueviolet; */
+        border-width: 1px;
+        border-style: solid;
+        border-top: 0;
+        border-left: 0;
+        border-bottom: 0;
+        margin-left: 40%;
+    }
+
+
+</style>
