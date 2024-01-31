@@ -19,8 +19,8 @@ Make sure NodeJS and MongoDB are installed
 4. `cd project/src` and run `node app.js` or `nodemon app.js` (for instant restart, if 'nodemon' is installed)
 
 ## Make Sure To Be Installed
-1. NodeJS (NodeJsURL)
-2. MongoDB (Mongo.orgUrl)
+1. NodeJS (https://nodejs.org/en)
+2. MongoDB (https://www.mongodb.com)
 
 ## Functional Features
 [x] Posting Text  
