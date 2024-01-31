@@ -5,11 +5,11 @@ This is a portfolio project, with the objective of develop a twitter clone using
 Make sure NodeJS and MongoDB are installed
 
 ## Index
--[Instalation](#instalation)
--[Make Sure To Be Installed](#aakeSureToBeInstalled)
--[Functional Features](#functionalFeatures)
--[Non-funnctional Features](#nonfunctionalFeatures)
--[Project Dependencies](#projectDependencies)
+- [Instalation](#instalation)
+- [Make Sure To Be Installed](#make-sure-to-be-installed)
+- [Functional Features](#functional-features)
+- [Non-funnctional Features](#non-functional-features)
+- [Project Dependencies](#project-dependencies)
 
 
 ## Instalation
