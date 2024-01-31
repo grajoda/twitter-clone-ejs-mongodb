@@ -31,11 +31,11 @@ Make sure NodeJS and MongoDB are installed
 [x] Profile Page  
 
 ## Non-functional Features
-[] Trend Recomendation
-[] User Recomendation
-[] Comment Post
-[] Share Post 
-[] delete Post
+[ ] Trend Recomendation  
+[ ] User Recomendation  
+[ ] Comment Post  
+[ ] Share Post   
+[ ] delete Post  
 
 ## Project Dependencies
 1. express
