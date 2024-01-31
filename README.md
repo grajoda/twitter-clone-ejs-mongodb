@@ -23,12 +23,12 @@ Make sure NodeJS and MongoDB are installed
 2. MongoDB (Mongo.orgUrl)
 
 ## Functional Features
-[x] Posting Text
-[x] Like Post
-[x] Search User Mechanism
-[x] Follow User
-[x] Send Message / Chat
-[x] Profile Page
+[x] Posting Text  
+[x] Like Post  
+[x] Search User Mechanism  
+[x] Follow User  
+[x] Send Message / Chat  
+[x] Profile Page  
 
 ## Non-functional Features
 [] Trend Recomendation
